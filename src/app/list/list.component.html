@@ -5,10 +5,12 @@
     <form [formGroup]="todoForm" >
     <div *ngFor="let todo of todos">
             <div class="card mb-2 bg-success text-white" *ngIf="todo.state" >
-                <div class="card-body">
-                    <h3>{{ todo.title }}</h3>
-                </div>    
-                    <input id="state" type="checkbox" formControlName="state" (click)="updateTodo(todo.id)"/>
+                    <div class="card-body row align-items-center">
+                        <input class="col-1" id="state" type="checkbox" formControlName="state" (click)="updateTodo(todo.id)"/>
+                        <h3 class="col-4">{{ todo.title }}</h3>  
+                        <div class="col-2"></div>
+                        <button class="btn btn-light col-2" (click)=storeTodo(todo) routerLink="/detail">Détails</button>
+                    </div>                  
             </div> 
     </div>
     </form>

@@ -50,5 +50,7 @@ export class ListComponent implements OnInit {
   );
 }
   
-
+  storeTodo(todo: Todo){
+    localStorage.setItem('todo', JSON.stringify(todo));
+  }
 }

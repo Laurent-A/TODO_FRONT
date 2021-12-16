@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { ListComponent } from './list/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    ListComponent
+    ListComponent,
+    DetailComponent
     
   ],
   imports: [
