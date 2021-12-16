@@ -1,21 +1,25 @@
 
+
 <div class="container mt-5">
     <h2 class="mb-3">Ce que j'ai à faire !</h2>
+    <form [formGroup]="todoForm" >
     <div *ngFor="let todo of todos">
-        <div class="card mb-2 bg-success text-white" *ngIf="todo.state" >
-            <div class="card-body">
-                <h3>{{ todo.title }}</h3>
-            </div>
-        </div>
+            <div class="card mb-2 bg-success text-white" *ngIf="todo.state" >
+                <div class="card-body">
+                    <h3>{{ todo.title }}</h3>
+                </div>    
+                    <input id="state" type="checkbox" formControlName="state" (click)="updateTodo(todo.id)"/>
+            </div> 
     </div>
+    </form>
 </div>
 
 <div class="container mt-5">
     <h2 class="mb-3">Ce que j'ai déjà fait !</h2>
     <div *ngFor="let todo of todos">
-        <div class="card mb-2 bg-secondary text-white" *ngIf="!todo.state" >
+        <div class="card mb-2 bg-secondary text-white " *ngIf="!todo.state"  >
             <div class="card-body">
-                <h3>{{ todo.title }}</h3>
+                <h3 class='todo-complete'>{{ todo.title }}</h3>
             </div>
         </div>
     </div>

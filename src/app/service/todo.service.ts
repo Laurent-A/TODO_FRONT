@@ -15,10 +15,13 @@ export class TodoService {
 
      }
 
-     todo: Todo;
      todos: Todo[];
 
-     getTodos(): Observable<Todo[]> {
+    getTodos(): Observable<Todo[]> {
         return this.httpClient.get<Todo[]>(routes.todo);
-        }   
+    }   
+
+    updateTodo(todo:Todo, id:number): Observable<Todo>{
+        return this.httpClient.put<Todo>(routes.todo+'/'+id, todo);
+    }
 }
