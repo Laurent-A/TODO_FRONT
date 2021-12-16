@@ -1,8 +1,31 @@
 
+<div class="container mb-3">
+    <div *ngIf="showForm">
+        <h3 class="mt-5 mb-1 ml-3">Créer votre Todo</h3>
+        <form [formGroup]="todoForm" >
+            <div class="form-group" >
+                <label for="title">Le titre de votre todo :</label>
+                <input type="text" class="form-control" id="title" formControlName="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="detail">Détail de votre todo :</label>
+                    <input type="text" class="form-control p-4" id="detail" formControlName="detail">
+                </div>
+                <div class="row d-flex justify-content-around mt-2">
+                    <button type="submit" class="btn btn-primary col-3 ml-2" (click)="onSubmit()">Enregistrer</button>
+                    <button type="submit" class="btn btn-primary col-3" (click)="cancelCreate()">Annuler</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container mt-4" *ngIf="!showForm">
+    <button type="submit" class="btn btn-primary ml-3" (click)="showTodoForm()">Créer une nouvelle todo ?</button>
+</div>
 
 <div class="container mt-5">
     <h2 class="mb-3">Ce que j'ai à faire !</h2>
-    <form [formGroup]="todoForm" >
+    <form [formGroup]="stateForm" >
     <div *ngFor="let todo of todos">
             <div class="card mb-2 bg-success text-white" *ngIf="todo.state" >
                     <div class="card-body row align-items-center">
@@ -26,4 +49,6 @@
         </div>
     </div>
 </div>
+
+
 
