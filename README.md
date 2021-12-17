@@ -1,27 +1,36 @@
-# Todo
+# Contexte
+TODO FRONT est une applicatio web basée sur Angular permettant la gestion d'une todoList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+## 1 : Environnement
 
-## Development server
+### 1.2 : Fiche technique :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Angular 13.
+- Bootstrap 5
 
-## Code scaffolding
+## 2 : Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-	1 : cloner le dépot
+-	2 : placer vous dans le projet avec le terminal
+-	3 : npm start
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 3 : Rendu
 
-## Running unit tests
+### 3.1 : List my TODOs
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Exemple1](./src/assets/list.JPG)
 
-## Running end-to-end tests
+### 3.2 : Change a TODO state
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Exemple2](./src/assets/state.gif)
 
-## Further help
+### 3.3 : Detail a TODO
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Exemple1](./src/assets/detail.gif)
+
+### 3.4 : Add a new TODO
+
+![Exemple1](./src/assets/add.gif)
+
+Made by Laurent

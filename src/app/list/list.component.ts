@@ -76,7 +76,7 @@ export class ListComponent implements OnInit {
   onSubmit() {
     
     if (this.todoForm.invalid) {
-      alert('formulaire incomplet')
+      alert('formulaire incomplet : titre absent')
       return;
     }
     const todo: Todo = this.todoForm.getRawValue()
